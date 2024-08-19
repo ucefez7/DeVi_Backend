@@ -1,10 +1,11 @@
 const User = require('../models/User');
 
 
-// Get all users
+// Get all users by ID
 exports.getUsers = async (req, res) => {
   try {
     const users = await User.find();
+    console.log("user are here"+users);
     res.json(users);
   } catch (err) {
     res.status(500).json({ message: err.message });
