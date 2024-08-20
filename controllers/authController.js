@@ -4,6 +4,8 @@ const { signToken } = require('../utils/jwtUtils');
 
 exports.login = async (req, res) => {
   const { username, password } = req.body;
+  console.log(req.body);
+  
 
   try {
     const admin = await Admin.findOne({ username });
