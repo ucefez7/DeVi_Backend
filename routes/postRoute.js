@@ -5,6 +5,8 @@ const userController = require('../controllers/userController');
 // Route to create a new post
 router.post('/', userController.createPost);
 
+router.get('/all', getAllPosts);
+
 router.get('/user/:userId', userController.getPostsByUserId);
 
 module.exports = router;
